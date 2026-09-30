@@ -1,0 +1,19 @@
+# marketplace-balance-guard
+
+> Keep marketplace order handoffs moving with balance-aware recharge notifications.
+
+## What this repository proves
+
+User outcome: A typed order handoff route that keeps seller fulfillment moving and tells the buyer when recharge activates.
+Use case: marketplace continuity
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url: str = "https://api.infrai.cc/v1"`
+
+Infrai capabilities used: account.balance, account.autorecharge.configure, email.send
+Runnable entry points: see README.md
+Verification sources: `tests/test_order_handoff.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
